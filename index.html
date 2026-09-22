@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Formuário de cadastro com validação</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
       <label for="validationTooltip02">Sobrenome</label>
       <input type="text" class="form-control" id="validationTooltip02" placeholder="Sobrenome" value="Duarte" required>
       <div class="valid-tooltip">
-        Looks good!
+        parece bom!
       </div>
     </div>
     <div class="col-md-4 mb-3">
@@ -28,7 +29,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
         </div>
-        <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+        <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Usuário" aria-describedby="validationTooltipUsernamePrepend" required>
         <div class="invalid-tooltip">
           Por favor coloque um nome de usuário válido.
         </div>
@@ -47,18 +48,41 @@
       <label for="validationTooltip04">Estado</label>
       <input type="text" class="form-control" id="validationTooltip04" placeholder="Estado" required>
       <div class="invalid-tooltip">
-        Please provide a valid state.
+        Por favor coloque um Estado válido.
       </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationTooltip05">Cep:</label>
       <input type="text" class="form-control" id="validationTooltip05" placeholder="Cep" required>
       <div class="invalid-tooltip">
-        Please provide a valid zip.
+        Por favor coloque um Estado válido.
       </div>
     </div>
   </div>
   <button class="btn btn-primary" type="submit">Enviar</button>
 </form>
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
