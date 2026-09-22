@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formuário de cadastro com validação</title>
+</head>
+<body>
+    <form class="needs-validation" novalidate>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationTooltip01">Nome:</label>
+      <input type="text" class="form-control" id="validationTooltip01" placeholder="Seu nome" value="Giulia" required>
+      <div class="valid-tooltip">
+        Muito bom!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationTooltip02">Sobrenome</label>
+      <input type="text" class="form-control" id="validationTooltip02" placeholder="Sobrenome" value="Duarte" required>
+      <div class="valid-tooltip">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationTooltipUsername">Usuário</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+        </div>
+        <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+        <div class="invalid-tooltip">
+          Por favor coloque um nome de usuário válido.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationTooltip03">Cidade</label>
+      <input type="text" class="form-control" id="validationTooltip03" placeholder="Cidade" required>
+      <div class="invalid-tooltip">
+        Por favor coloque uma cidade válida.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationTooltip04">Estado</label>
+      <input type="text" class="form-control" id="validationTooltip04" placeholder="Estado" required>
+      <div class="invalid-tooltip">
+        Please provide a valid state.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationTooltip05">Cep:</label>
+      <input type="text" class="form-control" id="validationTooltip05" placeholder="Cep" required>
+      <div class="invalid-tooltip">
+        Please provide a valid zip.
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Enviar</button>
+</form>
+</body>
+</html>
